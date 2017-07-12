@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kishan.smsapp.R;
+import com.kishan.smsapp.adapter.ContactAdapter;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,6 +32,8 @@ public class FragmentContact extends Fragment {
     private void initView(View view) {
         rvContact = (RecyclerView) view.findViewById(R.id.rv_contact);
         rvContact.setLayoutManager(new LinearLayoutManager(getActivity()));
+        ContactAdapter contactAdapter = new ContactAdapter(getContext());
+        rvContact.setAdapter(contactAdapter);
     }
 
 }

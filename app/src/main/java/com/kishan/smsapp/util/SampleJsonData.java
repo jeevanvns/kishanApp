@@ -1,5 +1,13 @@
 package com.kishan.smsapp.util;
 
+import com.kishan.smsapp.model.ContactInfo;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 /**
  * Created by jeevan on 13-07-2017.
  *
@@ -13,7 +21,18 @@ public class SampleJsonData {
     public SampleJsonData() {
     }
 
-    public String getData() {
-        return data;
+    public ArrayList<ContactInfo> getData() {
+        ArrayList<ContactInfo> temp = new ArrayList<>();
+        try {
+            JSONArray contactJson = new JSONArray(data);
+            for (int i = 0; i < contactJson.length(); i++) {
+                JSONObject contactObject = new JSONObject(String.valueOf(contactJson.get(i)));
+                ContactInfo info = new ContactInfo(contactObject.getString("firstName"), contactObject.getString("lastName"), contactObject.getString("contactNo"));
+                temp.add(info);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return temp;
     }
 }
