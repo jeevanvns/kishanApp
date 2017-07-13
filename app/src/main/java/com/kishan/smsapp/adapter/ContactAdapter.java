@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.kishan.smsapp.R;
 import com.kishan.smsapp.model.ContactInfo;
@@ -35,6 +36,12 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        ContactInfo contactInfo = list.get(position);
+        if (contactInfo.getFirstName().length() != 0) {
+            char tempPlaceHolder = contactInfo.getFirstName().charAt(0);
+            holder.tvPlaceHolder.setText(tempPlaceHolder + "");
+        }
+        holder.tvName.setText(contactInfo.getFirstName() + " " + contactInfo.getLastName());
 
     }
 
@@ -44,8 +51,13 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView tvName;
+        private TextView tvPlaceHolder;
+
         public ViewHolder(View itemView) {
             super(itemView);
+            tvName = (TextView) itemView.findViewById(R.id.tv_name);
+            tvPlaceHolder = (TextView) itemView.findViewById(R.id.tv_place_holder);
         }
     }
 }

@@ -238,7 +238,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -249,7 +248,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
     }
-
 
 
     protected void onCameraResult(Bitmap path) {

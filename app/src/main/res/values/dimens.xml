@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_76">76dp</dimen>
+
+
+    //Margin
+    <dimen name="m_8">8dp</dimen>
+    <dimen name="ts_18">18sp</dimen>
+</resources>
