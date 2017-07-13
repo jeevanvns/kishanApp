@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import com.kishan.smsapp.R;
 import com.kishan.smsapp.adapter.ViewPagerAdapter;
 import com.kishan.smsapp.fragment.FragmentContact;
+import com.kishan.smsapp.fragment.FragmentSmsHistory;
 
 public class MainActivity extends BaseActivity {
 
@@ -39,7 +40,7 @@ public class MainActivity extends BaseActivity {
     private void setupViewPager(ViewPager vpSms) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new FragmentContact(), "Contact");
-        adapter.addFragment(new FragmentContact(), "History");
+        adapter.addFragment(new FragmentSmsHistory(), "History");
         vpSms.setAdapter(adapter);
     }
 

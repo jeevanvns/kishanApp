@@ -9,14 +9,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 /**
- * Created by jeevan on 13-07-2017.
+ * Created by Jeevan on 13-07-2017.
  *
  * @link jsonDataUtil
  */
 
 public class SampleJsonData {
 
-    private String data = "[{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"roshan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"}]";
+    private String data = "[{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"Roshan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"Kisan\",\"lastName\":\"Network\",\"contactNo\":\"9971792703\"},{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9140654947\"},{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"},{\"firstName\":\"Jeevan\",\"lastName\":\"Gupta\",\"contactNo\":\"9794051780\"}]";
 
     public SampleJsonData() {
     }

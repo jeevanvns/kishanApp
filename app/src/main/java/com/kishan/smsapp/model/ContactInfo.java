@@ -1,10 +1,13 @@
 package com.kishan.smsapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
- * Created by SurvivoR on 13-07-2017.
+ * Created by Jeevan on 13-07-2017.
  */
 
-public class ContactInfo {
+public class ContactInfo implements Parcelable {
     private String firstName;
     private String lastName;
     private String contactNo;
@@ -38,4 +41,34 @@ public class ContactInfo {
     public void setContactNo(String contactNo) {
         this.contactNo = contactNo;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(this.firstName);
+        dest.writeString(this.lastName);
+        dest.writeString(this.contactNo);
+    }
+
+    protected ContactInfo(Parcel in) {
+        this.firstName = in.readString();
+        this.lastName = in.readString();
+        this.contactNo = in.readString();
+    }
+
+    public static final Parcelable.Creator<ContactInfo> CREATOR = new Parcelable.Creator<ContactInfo>() {
+        @Override
+        public ContactInfo createFromParcel(Parcel source) {
+            return new ContactInfo(source);
+        }
+
+        @Override
+        public ContactInfo[] newArray(int size) {
+            return new ContactInfo[size];
+        }
+    };
 }

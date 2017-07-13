@@ -190,7 +190,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-    @Override
+ /*   @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
@@ -204,7 +204,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
-    }
+    }*/
 
 
     public boolean hasPermission(String[] permission) {

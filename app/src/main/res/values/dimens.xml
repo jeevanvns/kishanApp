@@ -7,4 +7,7 @@
     //Margin
     <dimen name="m_8">8dp</dimen>
     <dimen name="ts_18">18sp</dimen>
+    <dimen name="m2">2dp</dimen>
+    <dimen name="ts_14">14sp</dimen>
+    <dimen name="m_20">20dp</dimen>
 </resources>
